@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Institucional</title>
+    <link rel="stylesheet" href="Inicial.css">
+    
+</head>
+<body>
+    <header>
+        <img class="logo" src="./Savoia.png" alt="">
+        <div class="menu">
+            <a href="#div_inicial">INICIAL</a>
+            <a href="#sobre_projeto">PROJETO</a>
+            <a href="#simulador">SIMULADOR TIME</a>
+            <a href="#div_contato">CONTATO</a>
+            <a href="times.html">TIMES</a>
+            <a href="LOGIN.html">LOGIN | CADASTRO </a>
+        </div>
+    </header>
+
+    <div class="banner" id="div_inicial">
+        <h1>GOATECH</h1>
+        <h2>O Futuro dos Grandes Craques</h2>
+    </div>
+
+<div class="sobre_projeto" id="sobre_projeto"> <br>
+    <h1>Sobre o Projeto</h1>
+        <div class="sobre_projeto_card"><h4>A iniciativa...</h4> <br>
+            <p>O projeto "GOATECH" nasceu da necessidade de desenvolver 
+                novos jogadores e dar uma oportunidade aqueles que mais necessitam.
+            </p>
+    
+<br><br> 
+        <h4>Jeitinho brasileiro...</h4> <br>
+            <p>É simplesmente impossível falar em Brasil e não pensar em futebol. 
+            Uma paixão que não se limita independente da sua cor, do seu 
+            gênero ou até mesmo da sua idade. Esse amor une pessoas 
+            com opiniões políticas ou religiosas diferentes. Tudo isso por um único 
+            motivo: "Futebol"
+                </p>
+<br><br> 
+        <h4>Como vai funcionar?</h4> <br>
+            <p>Os times selecionados serão divididos em três categorias: A, B ou C.
+            De acordo com a quantidade de gols que o futuro atleta profissional informar 
+            na "Caluladora da Bola" será indicado o time adequado para o jovem começar 
+            uma carreira. 
+                </p>
+        </div>
+</div>
+
+<div class="simulador" id="simulador"> <br>
+    <h1>Simulador do futuro CRAQUE</h1>
+    <br> 
+<div class="container" style="text-align: center; margin: 60px;">
+    <div class="title"> Instruções </div>
+    <p class="p"> <br> Antes de tudo é importante que você se informe dos times que estão participando do projeto.<br> 
+    Você pode conhece-los na aba <a href="times.html" style="color: #520d12;">TIMES</a> e assim ver os critérios para 
+    se tornar um grande jogador de futebol.
+      
+    </P>
+    <div class="container" style="text-align: center; margin: 60px;">
+        <div class="title"> Cálculos </div>
+        <div class="input">
+        <label> Informe aqui a quantidade de gols realizados em sua categoria de base: </label> 
+        <input type="number" id='input_gol'>
+        <div class="input">
+        <label> Informe aqui a quantidade de assistências realizadas em sua categoria de base:</label>
+        <input type="number" id='input_ass'>
+        </div> <br> 
+        <button onclick="cat()"> Categoria </button>
+    
+        <div class="resposta" id="resposta" style="text-align: center; margin: 60px;">
+            <div class="title"> Resposta </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer id="div_contato"> <br> 
+    <h2> Localização e Contato </h2> <br> 
+    <div class="loc">
+        <a href="https://www.google.com/maps/place/Rua+Haddock+Lobo,+595+-+Cerqueira+C%C3%A9sar,+S%C3%A3o+Paulo+-+SP,+01414-002/@-23.5580824,-46.6617266,17z/data=!3m1!4b1!4m6!3m5!1s0x94ce59d2b0da4a3f:0xf9757971d2bc9963!8m2!3d-23.5580824!4d-46.6617266!16s%2Fg%2F11v0_44c70?entry=ttu">
+            Rua Haddock Lobo, 595 - Cerqueira César, São Paulo - SP, 01414-001</a>
+    </div>
+    <div class="devs">
+        <a href="https://github.com/RodrigoAlmeida2006" target="_blank">Rodrigo Almeida Munhoes Fré</a><br>
+    </div>
+</footer>
+
+</body>
+</html>
+<script> 
+resposta.style.display = "none";
+function cat(){
+resposta.style.display = "block";
+var gol = input_gol.value; 
+var ass = input_ass.value; 
+
+if(gol >= 1000){
+    resposta.innerHTML = `Categoria A!`
+}else if(gol <= 500 && gol >=300){
+    resposta.innerHTML = `Categoria B!`
+}else if(gol <= 300){
+    resposta.innerHTML = `Categoria C!`
+}else if(ass == 0){
+    resposta.innerHTML = `Quantidade de gols ou assistências inválidas!`
+}
+
+if(ass >= 1000){
+    resposta.innerHTML = `Categoria A!`
+}else if(ass <= 500 && ass >=300){
+    resposta.innerHTML = `Categoria B!`
+}else if(ass <= 300){
+    resposta.innerHTML = `Categoria C!`
+}else if(ass == 0){
+    resposta.innerHTML = `Quantidade de gols ou assistências inválidas!`
+}
+
+}
+
+</script>
