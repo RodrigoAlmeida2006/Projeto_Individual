@@ -25,12 +25,18 @@ body {
     max-height: 350px;
     overflow-y: auto;
   }
-  
-  .input-container::-webkit-scrollbar {
-    width: 0;
-    height: 0;
-  }
-  
+
+.input-container::-webkit-scrollbar{
+    width: 6px;
+}
+.input-container::-webkit-scrollbar-track{
+    background:#275c2b;
+}
+.input-container::-webkit-scrollbar-thumb{
+    background-color: #000;
+}
+
+
   .digitar {
     color: #000;
     text-align: center;
