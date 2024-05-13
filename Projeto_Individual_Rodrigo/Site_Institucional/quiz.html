@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+    <div class="nav-container">
+        <a href="dashboard.html" target="_self" class="nav-link" onclick="mostrarDash()">Resultados</a>
+        <a href="Inicial.html" target="_self" class="nav-link" onclick="mostrarInicio()">Home</a>
+    </div>
+
+    <div class="container">    
+        <h1 class="titulo">GOLQUIZ</h1> 
+        <div class="input-container">
+
+            <h2> 1-) Qual o maior campeão Brasileiro? </h2>    
+            <select id="select_1"> 
+                <option selected disabled value="#"> Selecione sua resposta </option>
+                <option value="1"> Atlético-Mg </option>
+                <option value="2"> Bahia </option>
+                <option value="3"> Ceará </option>
+                <option value="4"> Grêmio </option>
+                <option value="5"> Palmeiras </option>
+                <option value="6"> Vasco </option>
+            </select> 
+
+            <h2> 2-) O Estádio São Januário pertence a qual time? </h2>
+            <select id="select_2"> 
+                <option selected disabled value="#"> Selecione sua resposta </option>
+                <option value="1"> Atlético-Mg </option>
+                <option value="2"> Bahia </option>
+                <option value="3"> Ceará </option>
+                <option value="4"> Grêmio </option>
+                <option value="5"> Palmeiras </option>
+                <option value="6"> Vasco </option>
+            </select> 
+
+            <h2> 3-) Qual desses times tem mais Copas do Brasil? </h2>
+            <select id="select_3"> 
+                <option selected disabled value="#"> Selecione sua resposta </option>
+                <option value="1"> Atlético-Mg </option>
+                <option value="2"> Bahia </option>
+                <option value="3"> Ceará </option>
+                <option value="4"> Grêmio </option>
+                <option value="5"> Palmeiras </option>
+                <option value="6"> Vasco </option>
+            </select> 
+          
+            <h2> 4-) Qual desses times foi campeão brasileiro em 1959? </h2>
+            <select id="select_4"> 
+                <option selected disabled value="#"> Selecione sua resposta </option>
+                <option value="1"> Atlético-Mg </option>
+                <option value="2"> Bahia </option>
+                <option value="3"> Ceará </option>
+                <option value="4"> Grêmio </option>
+                <option value="5"> Palmeiras </option>
+                <option value="6"> Vasco </option>
+            </select> 
+
+            <h2> 5-) Qual o time que tem como mascote o "Vozão"</h2>
+            <select id="select_5"> 
+                <option selected disabled value="#"> Selecione sua resposta </option>
+                <option value="1"> Atlético-Mg </option>
+                <option value="2"> Bahia </option>
+                <option value="3"> Ceará </option>
+                <option value="4"> Grêmio </option>
+                <option value="5"> Palmeiras </option>
+                <option value="6"> Vasco </option>
+            </select> 
+
+            <h2> 6-) Qual o time onde Ronaldinho Gaúcho venceu a Copa Libertadores?</h2>
+            <select id="select_6"> 
+                <option selected disabled value="#"> Selecione sua resposta </option>
+                <option value="1"> Atlético-Mg </option>
+                <option value="2"> Bahia </option>
+                <option value="3"> Ceará </option>
+                <option value="4"> Grêmio </option>
+                <option value="5"> Palmeiras </option>
+                <option value="6"> Vasco </option>
+            </select> 
+            <br> 
+            <div class="botoes-container">
+                <button onclick="Verificar()">Verificar</button>
+                <button onclick="Cancelar()">Cancelar</button>
+            </div>
+        </div>
+
+</body>
+</html>
+<script>
+    var pontos = 0; 
+    var Errado = 0; 
+    var Certo = 0; 
+
+function Verificar(){
+    var Questao1 = select_1.value; 
+    var Questao2 = select_2.value; 
+    var Questao3 = select_3.value; 
+    var Questao4 = select_4.value; 
+    var Questao5 = select_5.value; 
+    var Questao6 = select_6.value; 
+
+    if(Questao1 == "#"){
+        alert("Você esqueceu de responder uma questão")
+    }else if(Questao1 != 5){
+        Errado++; 
+    }
+    else{
+        Certo++
+        pontos +=1
+    }
+
+
+    if(Questao2 == "#"){
+        alert("Você esqueceu de responder uma questão")
+    }else if(Questao2 != 6){
+        Errado++; 
+    }
+    else{
+        Certo++
+        pontos +=1
+    }
+    
+
+    if(Questao3 == "#"){
+        alert("Você esqueceu de responder uma questão")
+    }else if(Questao3 != 4){
+        Errado++; 
+    }
+    else{
+        Certo++
+        pontos +=1
+    }
+
+
+    if(Questao4 == "#"){
+        alert("Você esqueceu de responder uma questão")
+    }else  if(Questao4 != 2){
+        Errado++; 
+    }
+    else{
+        Certo++
+        pontos +=1
+    }
+
+
+    if(Questao5 == "#"){
+        alert("Você esqueceu de responder uma questão")
+    }else if(Questao5 != 3){
+        Errado++; 
+    }
+    else{
+        Certo++
+        pontos +=1
+    }
+
+
+    if(Questao6 == "#"){
+        alert("Você esqueceu de responder uma questão")
+    }else if(Questao6 != 1){
+        Errado++; 
+    }
+    else{
+        Certo++
+        pontos +=1
+    }
+    
+
+    alert("Você acertou: " +pontos);
+    select_1.value = "#";
+    select_2.value = "#";
+    select_3.value = "#";
+    select_4.value = "#";
+    select_5.value = "#";
+    select_6.value = "#";
+}
+
+</script>

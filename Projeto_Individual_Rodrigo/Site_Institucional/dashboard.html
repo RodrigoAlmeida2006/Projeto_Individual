@@ -11,8 +11,10 @@
     <div class="header">
         <div class="container">
           <h2>GOATECH</h2>
-          <ul class="navbar">
-            <li><a class="navbar botao" href="Inicial.html"> Home </a></li>
+            <div class="nav-container">
+              <a href="quiz.html" target="_self" class="nav-link" onclick="mostrarLogin()">GOLQUIZ</a>
+              <a href="Inicial.html" target="_self" class="nav-link" onclick="mostrarInicio()">Home</a>
+          </div>
           </ul>
         </div>
       </div>
@@ -20,15 +22,15 @@
       <div class="avisos">
         <div class="cards">
           <h1 id="porc1">10%</h1>
-          <p>Pessoas na categoria "A"</p>
+          <p>Categoria "A"</p>
         </div>
         <div class="cards">
           <h1 id="porc2">55%</h1>
-          <p>Pessoas na categoria "B"</p>
+          <p>Categoria "B"</p>
         </div>
         <div class="cards">
           <h1 id="porc3">35%</h1>
-          <p>Pessoas na categoria "C"</p>
+          <p>Categoria "C"</p>
         </div>
     
         <div class="indicadores">
@@ -42,7 +44,7 @@
             <p id="tempCritica"> 700 </p>
           </div>
           <div class="ind">
-            <p id="qtdAviarios">Pessoas que visitaram o seu GitHub para contato: </p>
+            <p id="qtdAviarios">Pessoas que responderam as questões do GOLQUIZ: </p>
             <p id="tempCritica"> 500 </p>
           </div>
         </div>
@@ -57,7 +59,7 @@
         </div>
     
         <div class="media_sensor">
-          <h2>Idade dos jovens que subiram para o profissional</h2>
+          <h2>Quantidade de acertos no GOLQUIZ</h2>
           <canvas id="grafico_media"></canvas>
         </div>
     
@@ -113,7 +115,7 @@
         labels: ["2018", "2019", "2020", "2021", "2022", "2023", "2024"],
         datasets: [
           {
-            label: "Idade",
+            label: "Acertos",
             data: [19.7, 22.2, 24.9, 21.4, 19.9, 23.1, 25.3],
             borderWidth: 2,
             borderColor: "#144600",
