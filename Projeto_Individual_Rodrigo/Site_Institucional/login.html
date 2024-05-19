@@ -15,8 +15,6 @@
     </header>
     <div class="container">
         <h1 class="titulo">Login</h1>
-        <h2 class="titulo2">Nome</h2>
-        <input id="input_nome" class="digitar" type="text" placeholder="Digite o seu nome...">
         <h2 class="titulo2">Email</h2>
         <input id="input_email" class="digitar" type="email" placeholder="Digite o seu email...">
         <h2 class="titulo2">Senha</h2>
@@ -33,21 +31,16 @@
     function cancelar() {
         input_email.value = "";
         input_senha.value = "";
-        input_nome.value = "";
     }
 
     function Entrar() {
         var url = "quiz.html";
 
-        var nome = input_nome.value
         var email = input_email.value
         var senha = input_senha.value
 
         var emailVal = email.indexOf("@", ".");
 
-        if (nome.length <= 1) {
-            alert("Nome inválido. Por favor, insira um nome válido.");
-        }
         if (emailVal < 0) {
             alert("Email inválido. Por favor, insira um email válido.");
         }
@@ -55,12 +48,12 @@
             alert('Senha incorreta')
         }
 
-        if (nome == 'Fernando Brandão' && email == 'fernando@sptech.school' && senha == 'Sprint2') {
+        if (email == 'fernando@sptech.school' && senha == 'Sprint2') {
             alert ('Login efetuado com sucesso')
             window.open(url, "_self")
         }else {
             alert ('Informações incorretas')
-        } if (nome == '' || email == '' || senha == '') {
+        } if (email == '' || senha == '') {
             alert ('Espaços em branco')
         } 
     
